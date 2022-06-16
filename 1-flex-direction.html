@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,59 +8,61 @@
     <title>Fundamentos - Flex Direction</title>
 
     <style>
-        .flex-container{
+        .flex-container {
             margin: 0;
             padding: 0;
             display: flex;
             list-style: none;
-            
+
         }
-        .flex-item{
+
+        .flex-item {
             background: blue;
             height: 50px;
             width: 50px;
             line-height: 50px;
             font-size: 20px;
-             color: white;
+            color: white;
             text-align: center;
             margin: 5px;
         }
 
-        .row{
+        .row {
             /* Os itens ficam em linha */
-            flex-direction: row ;
+            flex-direction: row;
         }
 
-        .row-reverse{
+        .row-reverse {
             /* Os itens ficam em linha reversa, ou seja 3, 2 e 1. */
-        flex-direction: row-reverse;
+            flex-direction: row-reverse;
         }
 
-        .row-reverse li{
+        .row-reverse li {
             background-color: red;
         }
 
-        .column{
+        .column {
             float: left;
             /* Os itens ficam em uma única coluna, um embaixo do outro */
             flex-direction: column;
         }
 
-        .column li{
+        .column li {
             background-color: orange;
         }
 
-        .column-reverse{
+        .column-reverse {
             float: right;
             /* Os itens ficam em uma única coluna, um embaixo do outro, porém em ordem reversa: 3, 2 e 1. */
             flex-direction: column-reverse;
         }
 
-        .column-reverse li{
+        .column-reverse li {
             background-color: purple;
         }
     </style>
 </head>
+
 <body>
     <ul class="flex-container row">
         <li class="flex-item">1</li>
@@ -93,4 +96,5 @@
         <li class="flex-item">5</li>
     </ul>
 </body>
+
 </html>

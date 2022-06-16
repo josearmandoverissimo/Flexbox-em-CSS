@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,14 @@
     <title>Fundamentos - flex wrap</title>
 
     <style>
-        .flex-container{
+        .flex-container {
             display: flex;
             height: 150px;
-            border:  2px solid black;
+            border: 2px solid black;
             max-width: 300px;
         }
 
-        .item{
+        .item {
             font-size: 24px;
             height: 50%;
             text-align: center;
@@ -25,35 +26,36 @@
 
         /* Valor padrão, não permite a quebra de linha.*/
         /* para salvar merge */
-        .nowrap{
+        .nowrap {
             flex-wrap: nowrap;
         }
-        
+
         /* Quebra a linha assim que um dos flex itens não puder mais ser compactado. */
-        .wrap{
+        .wrap {
             flex-wrap: wrap;
         }
-        
+
         /* Quebra a linha assim que um dos flex itens não puder mais ser compactado.
         A quebra é na direção contrária, ou seja para a linha acima */
-        .wrap-reverse{
+        .wrap-reverse {
             flex-wrap: wrap-reverse;
         }
 
-        .blue{
+        .blue {
 
             background-color: blue;
         }
 
-        .green{
+        .green {
             background-color: lightgreen;
         }
 
-        .orange{
+        .orange {
             background-color: orangered;
         }
     </style>
 </head>
+
 <body>
 
     <h1>no wrap</h1>
@@ -64,9 +66,9 @@
         <div class="item green">4</div>
     </div>
 
-    
+
     <h1>wrap</h1>
-        <div class="flex-container wrap">
+    <div class="flex-container wrap">
         <div class="item green">1</div>
         <div class="item blue">2</div>
         <div class="item orange">3</div>
@@ -74,7 +76,7 @@
     </div>
 
     <h1>wrap-reverse</h1>
-        <div class="flex-container wrap-reverse">
+    <div class="flex-container wrap-reverse">
         <div class="item green">1</div>
         <div class="item blue">2</div>
         <div class="item orange">3</div>
@@ -82,4 +84,5 @@
         <div class="item green">5</div>
     </div>
 </body>
+
 </html>
