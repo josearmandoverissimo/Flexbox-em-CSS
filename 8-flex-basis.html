@@ -20,6 +20,8 @@
             margin: 5px;
         }
 
+        /* flex-basis: auto;
+        // Esse é o padrão, ele faz com que a largura da base seja igual a do item. Se o item não tiver tamanho especificado, o tamanho será de acordo com o conteúdo. */
         .bauto {
             flex-basis: auto;
         }
@@ -36,6 +38,8 @@
             flex-grow: 2;
         }
 
+        /* flex-basis: 0;
+        // Se o grow for igual ou maior que 1, ele irá tentar manter todos os elementos com a mesma largura, independente do conteúdo (por isso 0 é o valor mais comum do flex-basis). Caso contrário o item terá a largura do seu conteúdo. */
         .b-0 {
             flex-basis: 0;
         }
@@ -43,11 +47,28 @@
         .w100 {
             flex-basis: 100px;
         }
+
+        #id {
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .pp{
+            text-transform:uppercase;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
     </style>
 </head>
 
 <body>
-    <p>auto</p>
+    <h1 id="id">flex-basis</h1>
+    <p class="">Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+        Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar o container é
+        distribuído ao redor do conteúdo do flex-item.</p>
+    <p class="pp">auto</p>
     <div class="flex-container">
         <div class="items bauto fg-1">A</div>
         <div class="items bauto fg-1">BBB</div>
@@ -55,7 +76,7 @@
         <div class="items bauto fg-2">DEF</div>
     </div>
 
-    <p>0 (zero)</p>
+    <p class="pp">0 (zero)</p>
     <div class="flex-container">
         <div class="items b-0 fg-1">AAAAAAAA</div>
         <div class="items b-0 fg-1">BBB</div>
@@ -63,7 +84,7 @@
         <div class="items b-0 fg-2">DEF</div>
     </div>
 
-    <p>basis + width</p>
+    <p class="pp">basis + width</p>
     <div class="flex-container">
         <div class="items w100 fg-2">AA</div>
         <div class="items w100 fg-2">BBB</div>

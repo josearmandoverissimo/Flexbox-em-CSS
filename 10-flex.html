@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .largura {
+            width: 200px;
+        }
+
+        .flex-1 {
+            flex: 1;
+            /* grow = 1, shrink = 1, basis = 0 */
+        }
+
+        .flex-2 {
+            flex: 2;
+            /* grow = 2, shrink = 1, basis = 0 */
+        }
+
+        #id {
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .pp {
+            text-transform: capitalize;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ppp {
+            text-transform: capitalize;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .up {
+            font-family: sans-serif;
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="id">flex</h1>
+    <p class="up">
+        Atalho para as propriedades flex-grow, flex-shrink e flex-basis. Geralmente você verá a propriedade flex nos
+        flex
+        itens ao invés de cada um dos valores separados.
+        Para melhor consistência entre os browsers, é recomendado utilizar a propriedade flex ao invés de cada
+        propriedade separada.
+        No exemplo é possível ver as mesmas configurações do exemplo do flex-basis porém agora utilizando apenas a
+        propriedade flex.
+    </p>
+    <h3 class="pp">flex: 1</h3>
+    <p class="pp">Define flex-grow: 1; flex-shrink: 1; e flex-basis: 0; <br>(em alguns browsers define como 0%, pois
+        estes
+        ignoram valores sem unidades, porém a função de 0 e 0% é a mesma.</p>
+    <h3 class="pp">flex: 0 1 auto</h3>
+
+    <p class="pp">Esse é o padrão, se você não definir nenhum valor de flex ou para as outras propriedades separadas, o
+        normal será flex-grow: 0, flex-shrink: 1 e flex-basis: auto.</p>
+
+    <h3 class="pp">flex: 2</h3>
+    <p class="pp">Define exatamente da mesma forma que o flex: 1; porém neste caso o flex-grow será de 2, o flex-shrink
+        continuará 1 e o flex-basis 0.</p>
+
+    <h3 class="pp">flex: 3 2 300px</h3>
+    <p class="ppp">flex-grow: 3, flex-shrink: 2 e flex-basis: 300px;</p>
+
+    <p class="pp"><b>Flex: 1</b></p>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBB</div>
+        <div class="item flex-1">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    <p class="pp"><b>Flex: mix</b></p>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BBB</div>
+        <div class="item flex-2">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    <p class="pp"><b>width -> ignorado -> basis = 0</b></p>
+    <div class="flex-container">
+        <div class="item flex-1 largura">A</div>
+        <div class="item flex-1 largura">BBB</div>
+        <div class="item flex-1 largura">CC</div>
+        <div class="item flex-1 largura">D</div>
+        <div class="item flex-1 largura">EF</div>
+    </div>
+</body>
+
+</html>
