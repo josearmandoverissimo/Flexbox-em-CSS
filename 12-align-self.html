@@ -60,12 +60,23 @@
             font-size: 25px;
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        .pp {
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: capitalize;
+        }
+
+        .ppp {
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: capitalize;
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 
 <body>
     <h1 id="id">align-self</h1>
-    <p>
+    <p class="pp">
         O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
         Caso
         um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
@@ -74,6 +85,21 @@
         itens estão em linhas, alinha o item ao topo da sua linha. Quando em colunas, alinha o item ao início (esquerda)
         da coluna.
     </p>
+    <h3 class="pp">align-self: auto;</h3>
+    <p class="pp">Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.</p>
+    <h3 class="pp">align-self: flex-start;</h3>
+    <p class="pp">alinha o item ao inicio.</p>
+    <h3 class="pp">align-self: flex-end;</h3>
+    <p class="pp">alinha o item ao final</p>
+    <h3 class="pp">align-self: center;</h3>
+    <p class="pp">alinha o item ao centro</p>
+    <h3 class="pp">align-self: baseline;</h3>
+    <p class="pp">alinha o item a linha de base</p>
+    <h3 class="pp">align-self: stretch;</h3>
+    <p class="ppp">estica o item</p>
+
+
+
     <section class="flex-container align-container">
         <div class="item auto">AAAAAA</div>
         <div class="item auto">123</div>
