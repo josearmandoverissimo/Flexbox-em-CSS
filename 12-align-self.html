@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align self</title>
+    <style>
+        .flex-container {
+            max-width: 350px;
+            border: 1px solid;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .align-container {
+            align-items: center;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            /* text-align: auto; */
+            margin: 5px;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        #id {
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="id">align-self</h1>
+    <p>
+        O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+        Caso
+        um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+
+        Vale lembrar que o alinhamento acontece tanto em linha quanto em colunas. Por exemplo o flex-start quando os
+        itens estão em linhas, alinha o item ao topo da sua linha. Quando em colunas, alinha o item ao início (esquerda)
+        da coluna.
+    </p>
+    <section class="flex-container align-container">
+        <div class="item auto">AAAAAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem Ipsum is therefore alway free from repetitions</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem Ipsum is therefore always free from repetition</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item end">Lorem Ipsum is therefore always free from repetition</div>
+        <div class="item stretch">ITEM 4</div>
+    </section>
+
+    <h1>column</h1>
+    <section class="flex-container align-container column">
+        <div class="item auto">AAAAAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem Ipsum is therefore alway free from repetitions</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <section class="flex-container column">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem Ipsum is therefore always free from repetition</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container column">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item end">Lorem Ipsum is therefore always free from repetition</div>
+        <div class="item stretch">ITEM 4</div>
+    </section>
+
+</body>
+
+</html>
